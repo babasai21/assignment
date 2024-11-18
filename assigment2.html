@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1.Write a Javascript program that removes the duplicate elements from an array.
+let duplicate =["apple","mango","apple","orange","mango","mango"];
+
+function removeDuplicates(arr){
+    return arr.filter((item,index)=>arr.indexOf(item) === index);
+}
+console.log(removeDuplicates(duplicate));
+let arr =["apple","mango","apple","orange","mango","mango"];
+
+function removeDuplicates(arr){
+    return arr.filter((item,index)=>arr.indexOf(item) === index);
+}
+console.log(removeDuplicates(arr))
+
+//2.Write a JavaScript program to create a new string without the first and last characters of a given string. 
+function removeFirstLast(str) {
+    return str.slice(1, -1);
+}
+
+const str = 'Suzuki Access 125';
+
+console.log(removeFirstLast(str));
+
+//3.Write a function that takes an array of strings as input and prints each element to the console using the forEach method
+const items = [56, 86, 76];
+const copy = [];
+
+items.forEach(function (item) {
+    copy.push(item);
+});
+console.log(copy);
+
+//4.Write a function that takes an array of numbers as input and returns true if any of the numbers are negative, otherwise false, using the some method.
+function ArrayContain(array){
+for(var arr of array){
+    if(arr < 0) return true;
+}
+return false;
+}
+
+var array1 = [10, -5, 6, 8]
+console.log(ArrayContain(array1))
+
+
+//5.Write a function that takes an array of numbers as input, filters out the even numbers, and then returns the sum of the remaining numbers using a combination of filter and reduce methods.
+// Initializing numbers array
+let numbers = [11,12,13,14,15,16,17,18,19,20];
+
+let evenNumbers = numbers.filter(function(element) {
+    return element % 2 === 0;
+});
+console.log(`Even num: ${evenNumbers}`);
+</script>
+</body>
+</html>
